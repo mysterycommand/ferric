@@ -5,5 +5,34 @@
   "repository": "git@github.com:mysterycommand/ferric.git",
   "author": "Matt Hayes <matt@mysterycommand.com>",
   "license": "(MIT OR Apache-2.0)",
-  "private": true
+  "private": true,
+  "scripts": {
+    "reset": "yarn clean node_modules/",
+    "clean": "cargo clean && rm -rf .cache/ coverage/ dist/",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url / --experimental-scope-hoisting",
+    "serve": "yarn build && serve dist",
+    "lint": "tslint 'src/**/*.ts' && cargo fmt -- --check",
+    "test": "cargo test"
+  },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0",
+    "yarn": "1.15.2"
+  },
+  "config": {},
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@types/node": "11.12.2",
+    "parcel-bundler": "1.12.3",
+    "parcel-plugin-wasm.rs": "1.2.8",
+    "prettier": "1.16.4",
+    "serve": "10.1.2",
+    "tslint": "5.14.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "typescript": "3.4.1"
+  }
 }

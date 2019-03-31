@@ -3,7 +3,9 @@ extern crate cfg_if;
 
 extern crate wasm_bindgen;
 extern crate web_sys;
+
 use wasm_bindgen::prelude::*;
+use web_sys::console;
 
 cfg_if! {
     // When the `console_error_panic_hook` feature is enabled, we can call the
@@ -31,11 +33,17 @@ cfg_if! {
 pub fn create() {
     // If the `console_error_panic_hook` feature is enabled this will set a
     // panic hook, otherwise it will do nothing.
-    set_panic_hook()
+    set_panic_hook();
+
+    console::log_1(&JsValue::from_str("create"));
 }
 
 #[wasm_bindgen]
-pub fn update() {}
+pub fn update() {
+    console::log_1(&JsValue::from_str("update"));
+}
 
 #[wasm_bindgen]
-pub fn render() {}
+pub fn render() {
+    console::log_1(&JsValue::from_str("render"));
+}
