@@ -1,0 +1,52 @@
+{
+  "name": "ferric",
+  "version": "1.0.0",
+  "description": "Rusty physics",
+  "repository": "git@github.com:mysterycommand/ferric.git",
+  "author": "Matt Hayes <matt@mysterycommand.com>",
+  "license": "(MIT OR Apache-2.0)",
+  "private": true,
+  "scripts": {
+    "reset": "yarn clean node_modules/",
+    "clean": "cargo clean && rm -rf .cache/ coverage/ dist/",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "serve": "yarn build && serve dist",
+    "lint": "tslint 'src/**/*.ts' && cargo fmt --all -- --check && cargo clippy",
+    "test": "cargo build && cargo test"
+  },
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0",
+    "yarn": "1.15.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/preset-typescript": "7.3.3",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/commit-analyzer": "6.1.0",
+    "@semantic-release/git": "7.0.8",
+    "@semantic-release/github": "5.2.10",
+    "@semantic-release/npm": "5.1.4",
+    "@semantic-release/release-notes-generator": "7.1.4",
+    "@types/node": "11.12.2",
+    "commitizen": "3.0.7",
+    "cz-conventional-changelog": "2.1.0",
+    "parcel-bundler": "1.12.3",
+    "parcel-plugin-wasm.rs": "1.2.8",
+    "prettier": "1.16.4",
+    "semantic-release": "15.13.3",
+    "semantic-release-github-pr": "https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
+    "serve": "10.1.2",
+    "tslint": "5.14.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "typescript": "3.4.1"
+  }
+}
