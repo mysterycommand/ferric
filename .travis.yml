@@ -26,12 +26,19 @@ env:
 
 before_install:
   # get rust, rustup, cargo
-  - curl https://sh.rustup.rs -sSf | sh
+  - curl https://sh.rustup.rs -sSf | sh -s -- -y
+  - source ${HOME}/.cargo/env
+  - rustc --version
+
+  # add components and targets
+  - rustup component add rustfmt
+  - rustup component add clippy
+  - rustup target add wasm32-unknown-unknown
+
+  # get wasm-pack, install-update
   - (test -x $HOME/.cargo/bin/wasm-pack || cargo install wasm-pack)
   - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
   - cargo install-update -a
-  - rustup component add rustfmt
-  - rustup target add wasm32-unknown-unknown
 
   # get the right npm version
   - NPM_VERSION=`node -pe "require('./package.json').engines.npm"`

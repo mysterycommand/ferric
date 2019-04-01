@@ -12,8 +12,8 @@
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url / --experimental-scope-hoisting",
     "serve": "yarn build && serve dist",
-    "lint": "tslint 'src/**/*.ts' && cargo fmt -- --check",
-    "test": "cargo test"
+    "lint": "tslint 'src/**/*.ts' && cargo fmt --all -- --check && cargo clippy",
+    "test": "cargo build && cargo test"
   },
   "engines": {
     "node": "10.15.3",
