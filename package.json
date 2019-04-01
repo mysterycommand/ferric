@@ -10,7 +10,7 @@
     "reset": "yarn clean node_modules/",
     "clean": "cargo clean && rm -rf .cache/ coverage/ dist/",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url / --experimental-scope-hoisting",
+    "build": "parcel build src/index.html --public-url ./",
     "serve": "yarn build && serve dist",
     "lint": "tslint 'src/**/*.ts' && cargo fmt --all -- --check && cargo clippy",
     "test": "cargo build && cargo test"
