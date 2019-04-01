@@ -1,0 +1,86 @@
+language: node_js
+# node_js version read from .nvmrc
+
+cache:
+  directories:
+    # cache cargo
+    - $HOME/.cargo
+    - $TRAVIS_BUILD_DIR/target
+
+    # cache yarn
+    - $HOME/.cache/yarn
+
+    # cache npm
+    - $HOME/.npm
+    - node_modules
+    - $TRAVIS_BUILD_DIR/node_modules
+
+    # cache parcel
+    - $TRAVIS_BUILD_DIR/.cache
+
+env:
+  global:
+    - secure: X0fzmoLsxlLCPt+h2bAhQRxjC3lqID720S1rZcW5lsXw5OANU+WSo+K1DivcK2x6kysb4GXSOLP2o2b6HHzRTptkVkUGWfTuUT9OscKsv+3UIubsfVmcOB8Scg2jx2Ymybq8mAncfGmzmtdfPTp/7vIx32c/zhq4DUHdR1kQ7SkjXBv2hlx1vhpTJXU5DoANW/yAUM6uhKrYujAO9D+sb0wG3XK06dowmmuEZtU21eA1daBzMeRSHtNvO6UI9dVkENwlU0y7hoMC589F6tSSPvffGHj7bh4LgrPe2XWgNswppMT5atj/psUHGuCFxSIZrUzhTRhmb1Vrlk705EeHwp/5NHX3Be6mPZR47ak2HlHxs3esR6M4HRoSC9ImDLtOe91xiAP520no2qITgHI8Nuxg+xx2sq9nfAAsUMRliexDlcRx5lazcwrqR2tmSpcyE8rSRJizrEoongJHZG7ORJAw0XirfPKv/8g/KNTCQeXKQ1sB+0BZ0p/5uCV/V5sJ3SxXp28pmPLqaaNoghmIFNG2+TH9t3ofBuVfCp2xV8sLoyGEmABvvc1XSGRhjGkhvlAkq6YFMLaQvn+ucPTZ/yXHGcOFGSDTL1DeYVB1yqAohSAZ41PSQMRrTSP7J9nBWAQKn+QXPPTPztjYvUZkCqlcxNaogJvsNkyC5XH0h/Y=
+    - secure: j9jT/AAjkyIKITKpUGenmjoMYjm1Va5NVueiPPTfMp+HfACjHnHmVArL8fax9Ku0mVOYwxvOiPHnxYmDW4neK/e3nGHELMgB51GwP5J3yoB8gvGxvoYKyvWVcAFTukQSY6wH5rBrZ+YGs7Yq4yv1IsN1zzw93CiQP7sxWt4F006tzz5LsGE8ljrYXJ5VX6u2MV2R0SS2F3TLtA+R7UEWoioWTXVt6KLNgs7vIpiVDwRAZUCgLzNHon61nv+M2gJpHOeeaNu6hf8hCZszqUURStRMJf21WbRylvGwqvUCrWW+F1oAU4OtxOCe6Tf5LtFwMB/IxatHaV3Cr0pUNa7taNF/JdjOdfaBxtJV+pu5x1jevEPiXF/TnOS5Um3JRYuEDEnK4V3uD3fQrGazpr3nIkf9eBztwysZkoHAd647saCLsuV4njjGMKjL7HnYA7BkgP3ie95VmErCsYZR/PCyU4HD9sCcxcihJ66HIbmtRbuqYuwSmqsNw3nC+NxQKsv09bdZ6hh9Yf8m++Oe9tP4XPZFrX1lOl5p66+beQ6QHmusC4O9a2VCe2QBvCsYmuIT3B23g+d+PRWIjQWYtRc52sksMO+cuAIpoYYV81OrA1BrpF1PU/SxbR/X43b8Kiud/Nq07tPJYV+5gGKnAXNH/+C62h05JIyKO4KIAqVCC1w=
+    - secure: a1VNXV4LPXv6nmXneS9UjkGOVTvIBXUerm6iN4jeogneaAtvrQYl/4msQtxzX1q3XbBH/uYc6wLwj5c8Cx+ho9cDQTbEi2zaYyParikvPKpgyW99YJGBG/0vlurlYm7L+slBUfDuxx2YOCzFkgZcYU1g3vbaGtRIXCLyLWtXDziVk3UiSQSph69U21fKiI7fa84o6kZTK1xAAk5jTTZlJ49xHVFOF3w+BSw4FvMenIXXN29QtQmrBtcWn1Rft6+AlGh50kDSFzXyRcfgwlpt0kOg6BebvQxEU8Go/3wpAaDhvYlHx5oo/2CsTAABd42t7yE9bT7piSPuDZq8guqayG1Si4USHxkd6mqEebFAxTv9j53wnic5oH1NGWDytZ0P3Am7U3+sH/Sk3cRooq1EhG98kXKKQHLvBWabA7FYsYwXIdU22/Yoo/fKxtGQJewSEQ8qAqebu+8pD+Tay0a6oZrHHYDs3M7DmsqRrnt7Tb6i/WW0Dl7yDgavqjHiaICbd5yzanm8mRn9oDT10J6MxQd6EuOycXOv0hHNB0GBXZKqONHKlc2hVkATcJ++9U5UyEoc90Ul66cGoqX5vQGHVXa5BSs5ZaqMq8QFKOHzGoBgHdS/H+hBvf4PiHkPSH1XnxO+NkU9ZNqPXQXxRg7UjB801G+rzPJgthZ8jPTflPE=
+
+before_install:
+  # get rust, rustup, cargo
+  - curl https://sh.rustup.rs -sSf | sh
+  - (test -x $HOME/.cargo/bin/wasm-pack || cargo install wasm-pack)
+  - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
+  - cargo install-update -a
+  - rustup component add rustfmt
+  - rustup target add wasm32-unknown-unknown
+
+  # get the right npm version
+  - NPM_VERSION=`node -pe "require('./package.json').engines.npm"`
+  - if [ `npm --version` != "$NPM_VERSION" ]; then
+    npm install --global npm@${NPM_VERSION};
+    fi
+
+  # get the right yarn version
+  - YARN_VERSION=`node -pe "require('./package.json').engines.yarn"`
+  - if [ `yarn --version` != "$YARN_VERSION" ]; then
+    curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION;
+    export PATH=$HOME/.yarn/bin:$PATH;
+    fi
+
+before_script:
+  # code climate's coverage reporter
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+    > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - './cc-test-reporter before-build'
+
+script:
+  - yarn lint
+  - yarn test
+  - yarn build
+
+after_success:
+  - test $TRAVIS_PULL_REQUEST != "false" && npx semantic-release-github-pr
+
+deploy:
+  # deploy a git tag, release notes, bump package.json, update READMEs
+  - provider: script
+    skip_cleanup: true
+    script: npx semantic-release
+    on:
+      branch: master
+
+  # deploy the site
+  - provider: pages
+    repo: mysterycommand/ferric
+    target_branch: gh-pages
+    github_token: '$GH_TOKEN'
+    allow_empty_commit: true
+    skip_cleanup: true
+    keep_history: true
+    local_dir: dist/
+    on:
+      branch: master
+
+after_script:
+  # report coverage
+  - './cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT'
