@@ -1,5 +1,5 @@
-language: node_js
-# node_js version read from .nvmrc
+language: rust
+rust: stable
 
 cache:
   directories:
@@ -25,14 +25,12 @@ env:
     - secure: a1VNXV4LPXv6nmXneS9UjkGOVTvIBXUerm6iN4jeogneaAtvrQYl/4msQtxzX1q3XbBH/uYc6wLwj5c8Cx+ho9cDQTbEi2zaYyParikvPKpgyW99YJGBG/0vlurlYm7L+slBUfDuxx2YOCzFkgZcYU1g3vbaGtRIXCLyLWtXDziVk3UiSQSph69U21fKiI7fa84o6kZTK1xAAk5jTTZlJ49xHVFOF3w+BSw4FvMenIXXN29QtQmrBtcWn1Rft6+AlGh50kDSFzXyRcfgwlpt0kOg6BebvQxEU8Go/3wpAaDhvYlHx5oo/2CsTAABd42t7yE9bT7piSPuDZq8guqayG1Si4USHxkd6mqEebFAxTv9j53wnic5oH1NGWDytZ0P3Am7U3+sH/Sk3cRooq1EhG98kXKKQHLvBWabA7FYsYwXIdU22/Yoo/fKxtGQJewSEQ8qAqebu+8pD+Tay0a6oZrHHYDs3M7DmsqRrnt7Tb6i/WW0Dl7yDgavqjHiaICbd5yzanm8mRn9oDT10J6MxQd6EuOycXOv0hHNB0GBXZKqONHKlc2hVkATcJ++9U5UyEoc90Ul66cGoqX5vQGHVXa5BSs5ZaqMq8QFKOHzGoBgHdS/H+hBvf4PiHkPSH1XnxO+NkU9ZNqPXQXxRg7UjB801G+rzPJgthZ8jPTflPE=
 
 before_install:
-  # get rust, rustup, cargo
-  - curl https://sh.rustup.rs -sSf | sh -s -- -y
-  - source ${HOME}/.cargo/env
-  - rustc --version
+  # add node version, read from .nvmrc
+  - nvm install
 
   # add components and targets
-  - rustup component add rustfmt
   - rustup component add clippy
+  - rustup component add rustfmt
   - rustup target add wasm32-unknown-unknown
 
   # get wasm-pack, install-update
