@@ -7261,7 +7261,8 @@ sax@^1.2.4, sax@~1.2.4:
 
 "semantic-release-github-pr@https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35":
   version "0.0.0-development"
-  resolved "https://github.com/mysterycommand/semantic-release-github-pr.git#b9c94d745b6a200524baea2da47b29a9af0b555a"
+  uid "9f1cce634b1c373551b61ed276497304dd1a27e9"
+  resolved "https://github.com/mysterycommand/semantic-release-github-pr.git#9f1cce634b1c373551b61ed276497304dd1a27e9"
   dependencies:
     execa "^0.8.0"
     github "^12.1.0"
