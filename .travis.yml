@@ -32,6 +32,7 @@ before_install:
 
   # get wasm-pack, install-update
   - (test -x $HOME/.cargo/bin/wasm-pack || cargo install wasm-pack)
+  - (test -x $HOME/.cargo/bin/wasm-bindgen || cargo install wasm-bindgen-cli)
   - (test -x $HOME/.cargo/bin/cargo-install-update || cargo install cargo-update)
   - cargo install-update -a
 
