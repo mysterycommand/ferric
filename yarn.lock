@@ -6065,9 +6065,10 @@ parcel-bundler@1.12.3:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-"parcel-plugin-wasm-pack@https://github.com/mysterycommand/parcel-plugin-wasm-pack.git":
-  version "1.0.0"
-  resolved "https://github.com/mysterycommand/parcel-plugin-wasm-pack.git#cf090abfb08d0a4ea3213f788cef9602bd4f1279"
+parcel-plugin-wasm-pack@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-wasm-pack/-/parcel-plugin-wasm-pack-1.0.1.tgz#b33c99137920eb5a3fec0ae1ea0467e155b5061c"
+  integrity sha512-A7yJYoOLtQelHnlFbnF9v41zSUdv3LFNv4KRouUJf6I5rhgQMmr6TVGJY/A4fCV0IR3ob8F0tenYpJRJLzov2w==
   dependencies:
     "@iarna/toml" "2.2.3"
     "@parcel/fs" "1.11.0"
