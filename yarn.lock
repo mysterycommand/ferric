@@ -6066,8 +6066,9 @@ parcel-bundler@1.12.3:
     ws "^5.1.1"
 
 "parcel-plugin-wasm-pack@https://github.com/mysterycommand/parcel-plugin-wasm-pack.git":
-  version "1.0.0"
-  resolved "https://github.com/mysterycommand/parcel-plugin-wasm-pack.git#cf090abfb08d0a4ea3213f788cef9602bd4f1279"
+  version "1.0.1"
+  uid bee8e517771aca29d890b298e5f048fba3ca15b0
+  resolved "https://github.com/mysterycommand/parcel-plugin-wasm-pack.git#bee8e517771aca29d890b298e5f048fba3ca15b0"
   dependencies:
     "@iarna/toml" "2.2.3"
     "@parcel/fs" "1.11.0"
