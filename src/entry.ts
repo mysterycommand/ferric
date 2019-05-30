@@ -1,6 +1,4 @@
-import { create, update, render } from './lib.rs';
+import { run } from './lib.rs';
 import './style.css';
 
-create();
-update();
-render();
+run();

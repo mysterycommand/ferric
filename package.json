@@ -6,24 +6,19 @@
   "author": "Matt Hayes <matt@mysterycommand.com>",
   "license": "(MIT OR Apache-2.0)",
   "private": true,
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.9.0",
+    "yarn": "1.16.0"
+  },
   "scripts": {
     "reset": "yarn clean node_modules/",
     "clean": "cargo clean && rm -rf .cache/ coverage/ dist/ pkg/",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url=./",
-    "serve": "yarn build && serve dist",
+    "serve": "yarn build && npx serve dist",
     "lint": "tslint 'src/**/*.ts' && cargo fmt --all -- --check && cargo clippy",
     "test": "cargo build && cargo test"
-  },
-  "engines": {
-    "node": "10.15.3",
-    "npm": "6.9.0",
-    "yarn": "1.15.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
   },
   "dependencies": {},
   "devDependencies": {
@@ -39,14 +34,18 @@
     "commitizen": "3.1.1",
     "cz-conventional-changelog": "2.1.0",
     "parcel-bundler": "1.12.3",
-    "parcel-plugin-wasm-pack": "3.0.0",
+    "parcel-plugin-wasm-pack": "3.0.2",
     "prettier": "1.17.1",
     "semantic-release": "15.13.12",
     "semantic-release-github-pr": "https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
-    "serve": "11.0.0",
     "tslint": "5.16.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-plugin-prettier": "2.0.1",
     "typescript": "3.5.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
