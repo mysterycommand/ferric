@@ -8,8 +8,8 @@
   "private": true,
   "engines": {
     "node": "10.16.0",
-    "npm": "6.9.0",
-    "yarn": "1.16.0"
+    "npm": "6.10.1",
+    "yarn": "1.17.3"
   },
   "scripts": {
     "reset": "yarn clean node_modules/ && yarn install",
