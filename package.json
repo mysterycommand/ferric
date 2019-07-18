@@ -12,7 +12,7 @@
     "yarn": "1.16.0"
   },
   "scripts": {
-    "reset": "yarn clean node_modules/",
+    "reset": "yarn clean node_modules/ && yarn install",
     "clean": "cargo clean && rm -rf .cache/ coverage/ dist/ pkg/",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url=./",
