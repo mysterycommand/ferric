@@ -22,7 +22,7 @@ web-sys = { version = "0.3.25", features = [ "console", "CanvasRenderingContext2
 wee_alloc = { version = "0.4.4", optional = true }
 
 [dev-dependencies]
-wasm-bindgen-test = "0.2.48"
+wasm-bindgen-test = "0.3.1"
 
 [profile.release]
 # optimize for size
