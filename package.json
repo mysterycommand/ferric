@@ -7,9 +7,9 @@
   "license": "(MIT OR Apache-2.0)",
   "private": true,
   "engines": {
-    "node": "10.16.3",
-    "npm": "6.11.2",
-    "yarn": "1.17.3"
+    "node": "12.13.0",
+    "npm": "6.13.0",
+    "yarn": "1.19.1"
   },
   "scripts": {
     "reset": "yarn clean node_modules/ && yarn install",
@@ -34,8 +34,8 @@
     "@types/node": "12.11.1",
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
-    "parcel-bundler": "1.12.3",
-    "parcel-plugin-wasm-pack": "4.1.2",
+    "parcel-bundler": "1.12.4",
+    "parcel-plugin-wasm-pack": "5.0.0",
     "prettier": "1.18.2",
     "semantic-release": "15.13.24",
     "semantic-release-github-pr": "https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
