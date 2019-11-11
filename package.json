@@ -1,6 +1,6 @@
 {
   "name": "ferric",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rusty physics",
   "repository": "git@github.com:mysterycommand/ferric.git",
   "author": "Matt Hayes <matt@mysterycommand.com>",
