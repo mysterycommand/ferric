@@ -35,7 +35,7 @@
     "commitizen": "4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "parcel-bundler": "1.12.4",
-    "parcel-plugin-wasm-pack": "5.0.0",
+    "parcel-plugin-wasm-pack": "5.0.1",
     "prettier": "1.19.1",
     "semantic-release": "15.13.31",
     "semantic-release-github-pr": "https://github.com/mysterycommand/semantic-release-github-pr.git#fix/34-and-35",
