@@ -37,7 +37,7 @@
     "parcel-bundler": "1.12.4",
     "parcel-plugin-wasm-pack": "5.0.1",
     "prettier": "1.19.1",
-    "semantic-release": "17.0.3",
+    "semantic-release": "17.0.4",
     "semantic-release-github-pr": "6.0.0",
     "tslint": "6.0.0",
     "tslint-config-prettier": "1.18.0",
