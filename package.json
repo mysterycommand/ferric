@@ -35,7 +35,7 @@
     "commitizen": "4.1.2",
     "cz-conventional-changelog": "3.2.0",
     "parcel-bundler": "1.12.4",
-    "parcel-plugin-wasm-pack": "5.0.1",
+    "parcel-plugin-wasm-pack": "6.0.0",
     "prettier": "2.0.5",
     "semantic-release": "17.0.8",
     "semantic-release-github-pr": "6.0.0",
