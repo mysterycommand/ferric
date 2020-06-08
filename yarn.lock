@@ -6519,10 +6519,10 @@ parcel-bundler@1.12.4:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-parcel-plugin-wasm-pack@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/parcel-plugin-wasm-pack/-/parcel-plugin-wasm-pack-6.0.0.tgz#d9e1b545e238a6a94d218f46adf0ab5246d582a8"
-  integrity sha512-my3+uWtA51nciQ5U3OzENog+7Ws76rYRmc56LpvRVGNeONztJZwfMiN+a/GPACgfNGfNMTtl358V0L19QssymA==
+parcel-plugin-wasm-pack@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-wasm-pack/-/parcel-plugin-wasm-pack-6.0.1.tgz#0ab076793036a5cc68df39125a0165e21f7f7b2c"
+  integrity sha512-b9sGtTxtCxPX67HQTVEDiqqq0rnjur/Ru/XvmGfZRg84cHTa2X+4RovLOERWPVxZAGxALeLfojh1AscKNwjCZQ==
   dependencies:
     "@iarna/toml" "2.2.5"
     "@parcel/fs" "1.11.0"
