@@ -36,7 +36,7 @@
     "cz-conventional-changelog": "3.3.0",
     "parcel-bundler": "1.12.4",
     "parcel-plugin-wasm-pack": "6.0.1",
-    "prettier": "2.1.1",
+    "prettier": "2.1.2",
     "semantic-release": "17.1.2",
     "semantic-release-github-pr": "6.0.1",
     "tslint": "6.1.2",
