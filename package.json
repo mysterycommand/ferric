@@ -32,7 +32,7 @@
     "@semantic-release/npm": "7.0.6",
     "@semantic-release/release-notes-generator": "9.0.1",
     "@types/node": "14.11.10",
-    "commitizen": "4.2.1",
+    "commitizen": "4.2.2",
     "cz-conventional-changelog": "3.3.0",
     "parcel-bundler": "1.12.4",
     "parcel-plugin-wasm-pack": "6.0.1",
